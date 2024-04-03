@@ -1,11 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster&display=swap');
+
+:root {
+    --header-height: 96px;
+    --footer-height: 90px;
+    --rtm-negro: #080707;
+    --rtm-blanco: #faf2f2;
+    --rtm-verde: #04c970;
+    --rtm-indigo: #190770;
+    --rtm-rojo: #E80707;
+}
+body {
+    overflow: hidden;
+}
+.ff-breeSerif,
+.ff-breeSerif * {
+    font-family: 'Bree Serif';
+}
+.ff-lobster,
+.ff-lobster * {
+    font-family: 'Lobster';
+}
 header {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 192px;
+    min-height: var(--header-height);
     background-color: #00000011;
     background-image: url('../img/mazon.svg');
     background-repeat: repeat;
-    background-size: 128px;
+    background-size: 64px;
+}
+span.logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 30pt;
+    font-weight: 600;
+    top: 70%;
+    color: var(--rtm-indigo);
+    text-shadow:
+        2px 2px 0px #f0f0f0,
+        2px -2px 0px #f0f0f0,
+        -2px -2px 0px #f0f0f0,
+        -2px 2px 0px #f0f0f0;
+}
+.content {
+    padding: 0.5em;
+    height: calc(100vh - var(--header-height));
+}
+#home {
+    background-image: url('../img/bar2-espj-min.jpg');
+    background-size: cover;
+    background-position: 0px -224px;
+}
+.plan-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em 0em;
+}
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/card.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+}
+/* .plan-card ul {
+    list-style-image: 
+} */
+.plan-card ul {
+    margin: 0;
+    font-size: 10pt;
+    padding: 1ch;
+    list-style-position: inside;
+}
+.plan-card ul li {
+    padding: 0;
+}
+hr.hr-menu {
+    height: 5px;
+    /* width: 85%; */
+    border-radius: 3px;
+    background: var(--rtm-rojo);
+    opacity: 100%;
+    border: none;
+}
+footer {
+    min-height: var(--footer-height);
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background: #ffffff33;
+}
+.stools {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: -200px;
 }
