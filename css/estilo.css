@@ -27,7 +27,7 @@ header {
     justify-content: center;
     align-items: center;
     min-height: var(--header-height);
-    background-color: #00000011;
+    background-color: #fff;
     background-image: url('../img/mazon.svg');
     background-repeat: repeat;
     background-size: 64px;
@@ -50,12 +50,54 @@ span.logo {
 .content {
     padding: 0.5em;
     height: calc(100vh - var(--header-height));
+    z-index: 2;
 }
-#home {
-    background-image: url('../img/bar2-espj-min.jpg');
-    background-size: cover;
-    background-position: 0px -224px;
+#background-home {
+    background-image: url('../img/pared.jpeg');
+    background-size: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -3;
 }
+.cuadros {
+    height: 100vh;
+    filter: blur(2px);
+    opacity: 85%;
+}
+.cuadro-red-social {
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 3em;
+    background-size: contain;
+    background-image: url('../img/480_F_107373489_KHtokkdsxhpqXHqRuiRNh7Ddu2bGEI5O.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cuadro-red-social img {
+    width: 50%;
+    height: auto;
+}
+#barra {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    object-fit: contain;
+    z-index: -1;
+}
+#barra img.img-foreground, #barra img.img-blur {
+    position: fixed;
+    /* top: 0; */
+    width: 100%;
+    height: auto;
+}
+#barra img.img-foreground { opacity: 50% }
+#barra img.img-blur {  z-index: -2; filter: blur(2px); }
 .plan-cards {
     display: flex;
     flex-direction: row;
